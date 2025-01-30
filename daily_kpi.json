@@ -1,0 +1,28 @@
+{
+    "2025-01-27": {
+        "new_visitors": {
+            "value": 3
+        },
+        "new_signups": {
+            "value": 3
+        },
+        "demo_calls": {
+            "value": 3
+        },
+        "calls_without_errors": {
+            "value": 3
+        },
+        "calls_connected": {
+            "value": 3
+        },
+        "calls_longer_than_29_sec": {
+            "value": 3
+        },
+        "active_subscriptions": {
+            "value": 3
+        },
+        "canceled_subscriptions": {
+            "value": 1
+        }
+    }
+}
