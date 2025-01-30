@@ -3,9 +3,11 @@
 Welcome to the VoiceGenie KPI Automation repository! This project automates the generation and presentation of daily Key Performance Indicators (KPIs) for the VoiceGenie product.
 
 ## 📊 Overview
+
 VoiceGenie KPI Automation retrieves data from a MongoDB database, processes it, stores it in `daily_kpi.json`, and formats it for Slack messaging. This helps in monitoring business metrics efficiently.
 
 ## 🚀 Features
+
 - **Automated KPI Calculation** – Extracts and computes KPI values automatically.
 - **Fallback Mechanism** – Prompts for manual input when data is missing.
 - **Compact Storage** – Efficiently stores daily KPI data in JSON format.
@@ -14,11 +16,13 @@ VoiceGenie KPI Automation retrieves data from a MongoDB database, processes it, 
 - **Scalability** – Easily integrates additional KPIs and automation features.
 
 ## 🛠️ Technologies Used
+
 - **Programming Language:** Python 3.7+
 - **Database:** MongoDB
 - **Dependencies:** Pymongo
 
 ## 📂 Project Structure
+
 ```
 voicegenie_kpi_project/
 │-- db_connector.py      # Manages MongoDB connections and data retrieval
@@ -62,11 +66,13 @@ vg-kpi
 ```
 
 ## ⚙️ Configuration
+
 - **Database Settings** – Modify `db_connector.py` to update database connection details.
 - **KPI Customization** – Edit `kpi_calculator.py` to define new KPIs or modify existing calculations.
 - **Slack Message Formatting** – Customize `formatter.py` to tailor Slack notifications.
 
 ## 📊 Sample Output
+
 ```
 *KPI Report for 2025-01-27:*
 *New Visitors:* 3
@@ -83,6 +89,7 @@ vg-kpi
 
 ### ❌ Duplicate Key Error in MongoDB
 If you encounter `E11000 duplicate key error`, clear existing data:
+
 ```python
 from pymongo import MongoClient
 client = MongoClient("mongodb://localhost:27017")
@@ -96,18 +103,47 @@ db["subscriptions"].delete_many({})
 If data is missing, the script will prompt for manual input. Ensure MongoDB contains valid data to reduce prompts.
 
 ## 🚀 Future Enhancements
+
 - Fully automate currently manual KPI retrieval.
 - Integrate Slack API for direct report posting.
 - Implement logging and advanced error handling.
 
+## 📜 Changelog
+
+### [1.2.0] - 2025-02-05
+- Added:
+  - Slack message formatting.
+  - Automated KPI comparison.
+
+### [1.1.0] - 2025-02-01
+- Changed:
+  - Improved KPI calculations.
+  - Enhanced error handling.
+
+### [1.0.0] - 2025-01-30
+- Added:
+  - Initial version of KPI automation script.
+  - MongoDB connection and dummy data setup.
+  - JSON-based KPI storage.
+
+## 🔍 Assumptions
+
+- The MongoDB database structure remains consistent.
+- The script runs daily, generating KPIs for the previous day.
+- User input is required for missing KPI values but can be automated in the future.
+- The JSON-based storage method is sufficient for daily KPI tracking.
+- Slack is the primary method for KPI reporting.
+
 ## 🤝 Contributing
+
 We welcome contributions! Feel free to fork this repository, submit pull requests, or suggest improvements.
 
 ## 👤 Author
+
 **Ashutosh Tripathi**
 
 ## 📜 License
-This project is licensed under the **MIT License**.
 
----
+This project is licensed under the MIT License.
+
 Thank you for using VoiceGenie KPI Automation!
